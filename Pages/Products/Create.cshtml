@@ -1,0 +1,39 @@
+@page
+@model dQRadca.Pages.Products.CreateModel
+
+@{
+    ViewData["Title"] = Resources.ApplicationTexts.CreateTitle;
+}
+
+<h2>@Resources.ApplicationTexts.CreateHeader</h2>
+
+<h4>@Resources.ApplicationTexts.Product</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Product.ProductName" class="control-label"></label>
+                <input asp-for="Product.ProductName" class="form-control" />
+                <span asp-validation-for="Product.ProductName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Product.UrlString" class="control-label"></label>
+                <input asp-for="Product.UrlString" class="form-control" />
+                <span asp-validation-for="Product.UrlString" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Dodaj" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-page="Index">@Resources.ApplicationTexts.BackToList</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync($"_ValidationScriptsPartial");}
+}

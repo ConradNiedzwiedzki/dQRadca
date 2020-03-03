@@ -1,0 +1,21 @@
+﻿@page
+@model dQRadca.Pages.Products.PrintModel
+
+@{
+    ViewData["Title"] = "dQRadca.pl - podgląd do wydruku";
+}
+    <center>
+        @foreach (var item in Model.Product)
+        {
+            <div><img src="data:image/png;base64,@Html.DisplayFor(modelItem => item.QRCode)" height="200" width="200" /><br />@Html.DisplayFor(modelItem => item.ProductName)</div>
+        }
+
+    <div>
+        <br />
+        <br />
+        <input type="button" value="Drukuj kody" class="btn btn-primary" onclick="window.print();" />
+        <br />
+        <a asp-page="./Index">@Resources.ApplicationTexts.BackToList</a>
+    </div>
+        
+    </center>

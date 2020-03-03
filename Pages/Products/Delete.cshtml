@@ -1,0 +1,46 @@
+@page "{id:int}"
+@model dQRadca.Pages.Products.DeleteModel
+
+@{
+    ViewData["Title"] = Resources.ApplicationTexts.DeleteTitle;
+}
+
+<h2>@Resources.ApplicationTexts.DeleteHeader</h2>
+
+<h3>@Resources.ApplicationTexts.DeleteText</h3>
+<div>
+    <h4>@Resources.ApplicationTexts.Product</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.ProductName)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.ProductName)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.CreatedDate)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Product.CreatedDate)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.UrlString)
+        </dt>
+        <dd>
+            <a href="@Html.DisplayFor(model => model.Product.UrlString)">@Html.DisplayFor(model => model.Product.UrlString)</a>
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Product.QRCode)
+        </dt>
+        <dd>
+            <img src="data:image/png;base64,@Html.DisplayFor(model => model.Product.QRCode)" height="200" width="200" />
+        </dd>
+    </dl>
+    
+    <form method="post">
+        <input type="hidden" asp-for="Product.ProductId" />
+        <input type="submit" value="Usuń" class="btn btn-default" /> |
+        <a asp-page="./Index">@Resources.ApplicationTexts.BackToList</a>
+    </form>
+</div>

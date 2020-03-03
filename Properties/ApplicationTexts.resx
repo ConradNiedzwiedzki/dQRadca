@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About2FADisabling" xml:space="preserve">
+    <value>Wyłączenie 2FA nie zmienia kluczy używanych w aplikacjach uwierzytelniających. Jeśli chcesz zmienić klucz
+        używany w aplikacji uwierzytelniającej, powinieneś &lt;a asp-page="./ResetAuthenticator"&gt;zresetować klucze uwierzytelniające.&lt;/a&gt;</value>
+  </data>
+  <data name="About2FADisablingTitle" xml:space="preserve">
+    <value>Ta akcja służy tylko do wyłączenia 2FA.</value>
+  </data>
+  <data name="AboutText" xml:space="preserve">
+    <value>Ta aplikacja została stworzona w celu ułatwienia życia sklepów, których produkty wymagają specjalistycznej wiedzy. Wystarczy, że Twój klient ma telefon mogący odczytać kod QR (a ma go w zasadzie każdy nowy smartfon :) ) i sam może dowiedzieć się o szczegółach specyfikacji danego produktu!</value>
+  </data>
+  <data name="AboutTitle" xml:space="preserve">
+    <value>O aplikacji</value>
+  </data>
+  <data name="AccountantID" xml:space="preserve">
+    <value>ID księgowego</value>
+  </data>
+  <data name="AccountManagement" xml:space="preserve">
+    <value>Zarządzanie kontem</value>
+  </data>
+  <data name="AddAnotherLoginService" xml:space="preserve">
+    <value>Dodaj kolejną usługę do logowania.</value>
+  </data>
+  <data name="AdminEmail" xml:space="preserve">
+    <value>admin@niedzwiedzki.net</value>
+  </data>
+  <data name="ApplicationName" xml:space="preserve">
+    <value>dQRadca</value>
+  </data>
+  <data name="ApproveOperationName" xml:space="preserve">
+    <value>Approve</value>
+  </data>
+  <data name="AuthConfiguration" xml:space="preserve">
+    <value>Konfiguracja aplikacji uwierzytelniającej</value>
+  </data>
+  <data name="AuthenticatorUriFormat" xml:space="preserve">
+    <value>otpauth://totp/{0}:{1}?secret={2}&amp;issuer={0}&amp;digits=6</value>
+  </data>
+  <data name="BackToList" xml:space="preserve">
+    <value>Wróć do listy</value>
+  </data>
+  <data name="CannotDisable2FA" xml:space="preserve">
+    <value>Nie można wyłączyć 2FA dla użytkownika o identyfikatorze '{0}', ponieważ nie jest obecnie włączony.</value>
+  </data>
+  <data name="ChangePassword" xml:space="preserve">
+    <value>Zmień hasło</value>
+  </data>
+  <data name="ChangeYourAccountSettings" xml:space="preserve">
+    <value>Zmień ustawienia swojego konta</value>
+  </data>
+  <data name="CodeMustBeSuppliedForPasswordResetException" xml:space="preserve">
+    <value>Aby zresetować hasło, należy podać kod.</value>
+  </data>
+  <data name="ConfirmEmailAdress" xml:space="preserve">
+    <value>Potwierdź adres e-mail</value>
+  </data>
+  <data name="ConfirmEmailAdressByClickingHere" xml:space="preserve">
+    <value>Potwierdź proszę swój adres e-mail &lt;a href='{0}'&gt;klikając tutaj&lt;/a&gt;.</value>
+  </data>
+  <data name="ContactAdressText" xml:space="preserve">
+    <value>Konrad Niedźwiedzki&lt;br /&gt;Możesz znaleźć mnie na: &lt;a href="https://www.linkedin.com/in/konrad-niedzwiedzki/"&gt;LinkedIn&lt;/a&gt;&lt;br /&gt;Mam też swoją stronę internetową: &lt;a href="http://niedzwiedzki.net/"&gt;niedzwiedzki.net&lt;/a&gt;&lt;br /&gt;</value>
+  </data>
+  <data name="ContactTitle" xml:space="preserve">
+    <value>Kontakt</value>
+  </data>
+  <data name="Copyright" xml:space="preserve">
+    <value>dQRadca.pl</value>
+  </data>
+  <data name="CreateHeader" xml:space="preserve">
+    <value>Dodawanie produktu</value>
+  </data>
+  <data name="CreateNewAccount" xml:space="preserve">
+    <value>Stwórz nowe konto.</value>
+  </data>
+  <data name="CreateOperationName" xml:space="preserve">
+    <value>Create</value>
+  </data>
+  <data name="CreateProductButton" xml:space="preserve">
+    <value>Dodaj nowy produkt</value>
+  </data>
+  <data name="CreateTitle" xml:space="preserve">
+    <value>Dodaj produkt</value>
+  </data>
+  <data name="Delete" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="DeleteHeader" xml:space="preserve">
+    <value>Usuwanie produktu</value>
+  </data>
+  <data name="DeleteOperationName" xml:space="preserve">
+    <value>Delete</value>
+  </data>
+  <data name="DeleteText" xml:space="preserve">
+    <value>Jesteś pewien, że chcesz usunąć ten produkt?</value>
+  </data>
+  <data name="DeleteTitle" xml:space="preserve">
+    <value>Usuń produkt</value>
+  </data>
+  <data name="Details" xml:space="preserve">
+    <value>Szczegóły</value>
+  </data>
+  <data name="DetailsTitle" xml:space="preserve">
+    <value>Szczegóły produktu</value>
+  </data>
+  <data name="Disable2FA" xml:space="preserve">
+    <value>Wyłącz uwierzytelnienie dwuskładnikowe (2FA)</value>
+  </data>
+  <data name="Disable2FAButton" xml:space="preserve">
+    <value>Wyłącz 2FA</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Edytuj</value>
+  </data>
+  <data name="EditTitle" xml:space="preserve">
+    <value>Edycja produktu</value>
+  </data>
+  <data name="EnableAuthStep1" xml:space="preserve">
+    <value>Pobierz aplikację do uwierzytelniania dwuskładnikowego, taką jak Microsoft Authenticator &lt;a href="https://go.microsoft.com/fwlink/?Linkid=825071"&gt;Windows Phone&lt;/a&gt;, &lt;a href="https://go.microsoft.com/fwlink/?Linkid=825072"&gt;Android&lt;/a&gt; lub &lt;a href="https://go.microsoft.com/fwlink/?Linkid=825073"&gt;iOS&lt;/a&gt; albo Google Authenticator dla &lt;a href="https://play.google.com/store/apps/details?id=com.google.android.apps.authenticator2&amp;amp;hl=en"&gt;Android&lt;/a&gt; lub &lt;a href="https://itunes.apple.com/us/app/google-authenticator/id388497605?mt=8"&gt;iOS&lt;/a&gt;.</value>
+  </data>
+  <data name="EnableAuthStep2" xml:space="preserve">
+    <value>Wprowadź ten klucz &lt;kbd&gt;{0}&lt;/kbd&gt; do Twojej aplikacji do uwierzytelniania dwuskładnikowego. Wielkość liter i spacje nie mają znaczenia.</value>
+  </data>
+  <data name="EnableAuthStep3" xml:space="preserve">
+    <value>Po wprowadzeniu powyższego klucza, Twoja aplikacja do uwierzytelniania dwuskładnikowego zapewni Ci dostęp z unikalnym kodem. Wprowadź kod w polu potwierdzenia poniżej.</value>
+  </data>
+  <data name="EnableAuthSteps" xml:space="preserve">
+    <value>Aby użyć aplikacji uwierzytelniającej, wykonaj następujące kroki:</value>
+  </data>
+  <data name="ErrorPageHeader" xml:space="preserve">
+    <value>Błąd</value>
+  </data>
+  <data name="ErrorPageTitle" xml:space="preserve">
+    <value>Błąd</value>
+  </data>
+  <data name="ErrorWhenProcessingRequest" xml:space="preserve">
+    <value>Podczas przetwarzania żądania wystąpił błąd.</value>
+  </data>
+  <data name="ErrorWhileSeedingTheDatabase" xml:space="preserve">
+    <value>An error occurred while seeding the database.</value>
+  </data>
+  <data name="ExternalLoginAdded" xml:space="preserve">
+    <value>Login zewnętrzny został dodany.</value>
+  </data>
+  <data name="ExternalLoginRemoved" xml:space="preserve">
+    <value>Login zewnętrzny został usunięty.</value>
+  </data>
+  <data name="ExternalLoginsManagament" xml:space="preserve">
+    <value>Zarządzanie zewnętrznymi loginami</value>
+  </data>
+  <data name="ExtrernalLogins" xml:space="preserve">
+    <value>Zewnętrzne loginy</value>
+  </data>
+  <data name="FilteredTitle" xml:space="preserve">
+    <value>Przefiltrowana lista produktów</value>
+  </data>
+  <data name="FilterSubmit" xml:space="preserve">
+    <value>Filtruj</value>
+  </data>
+  <data name="GenerateCodesButton" xml:space="preserve">
+    <value>Generuj kody odzyskiwania</value>
+  </data>
+  <data name="GeneratingTwoFactorAuthenticationRecoveryCodes" xml:space="preserve">
+    <value>Generowanie kodów odzyskiwania uwierzytelniania dwuskładnikowego (2FA)</value>
+  </data>
+  <data name="GeneretingCodesTitle" xml:space="preserve">
+    <value>Ta akcja generuje nowe kody odzyskiwania.</value>
+  </data>
+  <data name="InsertNameOfCompanyErrorMessage" xml:space="preserve">
+    <value>Wpisz nazwę firmy do faktury</value>
+  </data>
+  <data name="Invoice" xml:space="preserve">
+    <value>Produkt</value>
+  </data>
+  <data name="LogIn" xml:space="preserve">
+    <value>Logowanie</value>
+  </data>
+  <data name="LoginWithAccount" xml:space="preserve">
+    <value>Zaloguj używając konta {0}</value>
+  </data>
+  <data name="LogOut" xml:space="preserve">
+    <value>Wyloguj</value>
+  </data>
+  <data name="MainPageText" xml:space="preserve">
+    <value>Witamy w naszym dQRadcy! :)</value>
+  </data>
+  <data name="MainPageTitle" xml:space="preserve">
+    <value>Strona główna</value>
+  </data>
+  <data name="ManagerEmail" xml:space="preserve">
+    <value>manager@niedzwiedzki.net</value>
+  </data>
+  <data name="MarkAsIssuedButton" xml:space="preserve">
+    <value>Oznacz, jako 'wystawione'</value>
+  </data>
+  <data name="NameOfCompany" xml:space="preserve">
+    <value>Nazwa firmy do faktury</value>
+  </data>
+  <data name="NoAccountantIdAdded" xml:space="preserve">
+    <value>&lt;Nie dodałeś jeszcze ID księgowego do swojego profilu Dodaj ID księgowego, aby on również zobaczył fakturę!&gt;</value>
+  </data>
+  <data name="NoCompanyNameAdded" xml:space="preserve">
+    <value>&lt;Nie dodałeś jeszcze nazwy swojej firmy do swojego profilu!&gt;</value>
+  </data>
+  <data name="PasswordChange" xml:space="preserve">
+    <value>Zmiana hasła</value>
+  </data>
+  <data name="PasswordReset" xml:space="preserve">
+    <value>Resetowanie hasła</value>
+  </data>
+  <data name="Product" xml:space="preserve">
+    <value>Produkt</value>
+  </data>
+  <data name="ProductAccountantRole" xml:space="preserve">
+    <value>ProductAccountants</value>
+  </data>
+  <data name="ProductAdministratorsRole" xml:space="preserve">
+    <value>ProductAdministrators</value>
+  </data>
+  <data name="ProductsIndexTitle" xml:space="preserve">
+    <value>Lista produktów</value>
+  </data>
+  <data name="Profile" xml:space="preserve">
+    <value>Profil</value>
+  </data>
+  <data name="ReadOperationName" xml:space="preserve">
+    <value>Read</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Rejestracja</value>
+  </data>
+  <data name="RegisterButton" xml:space="preserve">
+    <value>Zarejestruj</value>
+  </data>
+  <data name="RegisteredLogins" xml:space="preserve">
+    <value>ZarejestrowaneLoginy</value>
+  </data>
+  <data name="RegisterTitle" xml:space="preserve">
+    <value>Rejestracja</value>
+  </data>
+  <data name="RejectOperationName" xml:space="preserve">
+    <value>Reject</value>
+  </data>
+  <data name="Remove" xml:space="preserve">
+    <value>Usuń</value>
+  </data>
+  <data name="RemoveLoginFromYourAccount" xml:space="preserve">
+    <value>Usuń {0} login ze swojego konta</value>
+  </data>
+  <data name="RequestId" xml:space="preserve">
+    <value>&lt;strong&gt;ID żądania:&lt;/strong&gt; &lt;code&gt;{0}&lt;/code&gt;</value>
+  </data>
+  <data name="ResetButton" xml:space="preserve">
+    <value>Resetuj</value>
+  </data>
+  <data name="ResetPasswordConfirmationText" xml:space="preserve">
+    <value>Twoje hasło zostało zresetowane. Proszę &lt;a asp-page="./Login"&gt;kliknąć tutaj&lt;/a&gt;, aby się zalogować.</value>
+  </data>
+  <data name="ResetPasswordConfirmationTitle" xml:space="preserve">
+    <value>Potwierdzenie zresetowania hasła</value>
+  </data>
+  <data name="ResetPasswordText" xml:space="preserve">
+    <value>Zresetuj swoje hasło.</value>
+  </data>
+  <data name="ResetPasswordTitle" xml:space="preserve">
+    <value>Resetowanie hasła</value>
+  </data>
+  <data name="ResetYourPasswordByClickingHere" xml:space="preserve">
+    <value>Zresetuj swoje hasło &lt;a href='{0}'&gt;klikając tutaj&lt;/a&gt;.</value>
+  </data>
+  <data name="ReturnToViewAllButton" xml:space="preserve">
+    <value>Wyczyść filtrowanie i wróć do listy wszystkich faktur</value>
+  </data>
+  <data name="SaveChanges" xml:space="preserve">
+    <value>Zapisz zmiany</value>
+  </data>
+  <data name="SeedUserPW" xml:space="preserve">
+    <value>SeedUserPW</value>
+  </data>
+  <data name="SignedOutSuccessfulText" xml:space="preserve">
+    <value>Twoje wylogowanie przebiegło pomyślnie.</value>
+  </data>
+  <data name="SignedOutTitle" xml:space="preserve">
+    <value>Wylogowano</value>
+  </data>
+  <data name="SwitchNavigation" xml:space="preserve">
+    <value>Przełącz nawigację</value>
+  </data>
+  <data name="TwoFactorAuthentication" xml:space="preserve">
+    <value>Uwierzytelnianie dwuskładnikowe</value>
+  </data>
+  <data name="UnableToLoadUserWithId" xml:space="preserve">
+    <value>Nie można załadować użytkownika z ID = {0}.</value>
+  </data>
+  <data name="UnexpectedErrorWhenDisabling2FA" xml:space="preserve">
+    <value>Wystąpił nieoczekiwany błąd podczas wyłączania 2FA dla użytkownika o identyfikatorze '{0}'.</value>
+  </data>
+  <data name="UnexpectedErrorWhileAddingExternalLogin" xml:space="preserve">
+    <value>Wystąpił nieoczekiwany błąd podczas dodawania zewnętrznych danych logowania dla użytkownika o identyfikatorze '{0}'.</value>
+  </data>
+  <data name="UnexpectedErrorWhileLoadingExternalLogin" xml:space="preserve">
+    <value>Wystąpił nieoczekiwany błąd podczas ładowania zewnętrznych danych logowania dla użytkownika o identyfikatorze '{0}'.</value>
+  </data>
+  <data name="UnexpectedErrorWhileRemovingExternalLogin" xml:space="preserve">
+    <value>Wystąpił nieoczekiwany błąd podczas usuwania zewnętrznego logowania dla użytkownika o identyfikatorze '{0}'.</value>
+  </data>
+  <data name="UpdateOperationName" xml:space="preserve">
+    <value>Update</value>
+  </data>
+  <data name="UpdateYourPassword" xml:space="preserve">
+    <value>Zaktualizuj hasło</value>
+  </data>
+  <data name="UserChangedTheirPasswordSuccessfully" xml:space="preserve">
+    <value>Użytkownik zmienił swoje hasło.</value>
+  </data>
+  <data name="UserCreatedNewAccountWithPassword" xml:space="preserve">
+    <value>Użytkownik utworzył nowe konto z hasłem.</value>
+  </data>
+  <data name="UserDisabled2FA" xml:space="preserve">
+    <value>Użytkownik o identyfikatorze '{0}' wyłączył 2FA.</value>
+  </data>
+  <data name="UserEnabled2FAWithAuth" xml:space="preserve">
+    <value>Użytkownik o identyfikatorze '{0}' włączył 2FA z aplikacją uwierzytelniającą.</value>
+  </data>
+  <data name="UserLoggedOut" xml:space="preserve">
+    <value>Użytkownik wylogowany.</value>
+  </data>
+  <data name="VerificationCode" xml:space="preserve">
+    <value>Kod weryfikacyjny</value>
+  </data>
+  <data name="VerificationCodeIsInvalid" xml:space="preserve">
+    <value>Kod weryfikacyjny jest nieprawidłowy.</value>
+  </data>
+  <data name="Verify" xml:space="preserve">
+    <value>Zweryfikuj</value>
+  </data>
+  <data name="WelcomePageText" xml:space="preserve">
+    <value>Witamy w naszym dQRadcy! :)</value>
+  </data>
+  <data name="WelcomeUserText" xml:space="preserve">
+    <value>Witaj, {0}!</value>
+  </data>
+  <data name="YourPasswordHasBeenChanged" xml:space="preserve">
+    <value>Twoje hasło zostało zmienione.</value>
+  </data>
+</root>

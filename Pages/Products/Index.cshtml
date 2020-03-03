@@ -1,0 +1,125 @@
+﻿@page
+@model dQRadca.Pages.Products.IndexModel
+
+@{
+    ViewData["Title"] = Resources.ApplicationTexts.ProductsIndexTitle;
+}
+
+<h2>Lista produktów</h2>
+
+<form asp-page="./Index" method="get">
+    <div class="form-actions no-color">
+        <p>
+            Filtruj po nazwie: <input type="text" name="SearchString" value="@Model.CurrentFilter" />
+            <input type="submit" value="Filtruj" class="btn btn-primary" /> |
+            <a asp-page="./Index" asp-route-sortOrder="@Model.CurrentSort"
+           asp-route-pageIndex="@Model.Product.PageIndex"
+           asp-route-currentFilter="" class="btn btn-default">Wyczyść filtrowanie</a>
+        </p>
+    </div>
+</form>
+
+<form method="post">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @{ var selectAllSetting = Model.SelectAll ? "false" : "true";
+                    }
+                    <a asp-page="./Index" asp-route-selectAll="@selectAllSetting"><span class="glyphicon glyphicon-check"></span></a>
+                </th>
+                <th>
+                    <a asp-page="./Index" asp-route-sortOrder="@Model.NameSort"
+                       asp-route-currentFilter="@Model.CurrentFilter">
+                        @Html.DisplayNameFor(model => model.Product[0].ProductName) <span class="glyphicon glyphicon-sort"></span>
+                    </a>
+                </th>
+                <th>
+                    <a asp-page="./Index" asp-route-sortOrder="@Model.DateSort"
+                       asp-route-currentFilter="@Model.CurrentFilter">
+                        @Html.DisplayNameFor(model => model.Product[0].CreatedDate) <span class="glyphicon glyphicon-sort"></span>
+                    </a>
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Product[0].UrlString)
+                </th>
+                <th>
+                    Możliwe czynności
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model.Product)
+            {
+                <tr>
+                    <td>
+                        <input type="checkbox"
+                               name="selectedProducts"
+                               value="@item.ProductId"
+                               @(Html.Raw(@item.IsSelected ? "checked=\"checked\"" : "")) />
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ProductName)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CreatedDate)
+                    </td>
+                    <td>
+                        <a href="@Html.DisplayFor(modelItem => item.UrlString)">@Html.DisplayFor(modelItem => item.UrlString)</a>
+                    </td>
+
+                    <td>
+                        @if ((await AuthorizationService.AuthorizeAsync(User, item, ProductOperations.Update)).Succeeded)
+                        {
+                            <a asp-page="./Edit" asp-route-id="@item.ProductId">@Resources.ApplicationTexts.Edit</a>
+                            <text> | </text>
+                        }
+
+                        <a asp-page="./Details" asp-route-id="@item.ProductId">@Resources.ApplicationTexts.Details</a>
+
+                        @if ((await AuthorizationService.AuthorizeAsync(User, item, ProductOperations.Delete)).Succeeded)
+                        {
+                            <text> | </text>
+                            <a asp-page="./Delete" asp-route-id="@item.ProductId">@Resources.ApplicationTexts.Delete</a>
+                        }
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+    <input type="submit" value="Drukuj zaznaczone" class="btn btn-primary"  />
+    <a asp-page="Create" class="btn btn-primary">@Resources.ApplicationTexts.CreateProductButton</a>
+</form>
+
+
+
+    @{
+        var prevDisabled = !Model.Product.HasPreviousPage ? "invisible" : "";
+        var nextDisabled = !Model.Product.HasNextPage ? "invisible" : "";
+    }
+
+    <p>
+        <a asp-page="./Index"
+           asp-route-sortOrder="@Model.CurrentSort"
+           asp-route-pageIndex="@(Model.Product.PageIndex - 1)"
+           asp-route-currentFilter="@Model.CurrentFilter"
+           class="btn btn-default @prevDisabled">
+            Poprzednia strona
+        </a>
+        <a asp-page="./Index"
+           asp-route-sortOrder="@Model.CurrentSort"
+           asp-route-pageIndex="@(Model.Product.PageIndex + 1)"
+           asp-route-currentFilter="@Model.CurrentFilter"
+           class="btn btn-default @nextDisabled">
+            Następna strona
+        </a>
+    </p>
+
+
+    
+
+
+
+
+
